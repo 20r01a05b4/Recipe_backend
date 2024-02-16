@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const Bookmark=async(username)=>{
    console.log("book marks")
-    const uri = "mongodb+srv://saikumar:Venkanna@cluster0.htntddq.mongodb.net/?retryWrites=true&w=majority";
+    const uri =process.env.url
     await mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
     const db = mongoose.connection;
